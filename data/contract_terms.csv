@@ -1,0 +1,6 @@
+marketplace,order_type,commission_rate,effective_date
+Marketplace A,delivery,0.25,2026-06-01
+Marketplace A,delivery,0.22,2026-07-01
+Marketplace A,pickup,0.10,2026-06-01
+Marketplace B,delivery,0.20,2026-06-01
+Marketplace B,pickup,0.08,2026-06-01

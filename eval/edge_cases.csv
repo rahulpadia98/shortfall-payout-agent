@@ -1,0 +1,11 @@
+external_order_id,description
+MPA-100122,"Pickup order charged the contracted 10% pickup rate, lower than delivery"
+MPA-100251,"Placed Sunday 2026-06-14 23:57, end of the payout week; appears in the following week's payout with correct amounts"
+MPA-100413,"Partial refund of $23.50 on gross sales of $67.15, deducted once at the correct amount"
+MPA-100557,Cancelled order; correctly has no payout row
+MPA-100568,"Ordered 2026-06-30 23:52, minutes before the 2026-07-01 rate change; correctly charged the old 25% delivery rate"
+MPA-100569,"Ordered 2026-07-01 00:07, just after the rate change took effect; correctly charged the new 22% delivery rate"
+MPA-100815,"Partial refund of $11.00 on gross sales of $55.01, deducted once at the correct amount"
+MPB-500405,"Placed Sunday 2026-06-28 23:44, end of the payout week; appears in the following week's payout with correct amounts"
+MPB-500454,Merchant-funded promo of $32.00 (about 45% of subtotal $71.39) correctly lowers the commission base; commission looks low vs. subtotal but is correct
+MPB-500813,Merchant-funded promo of $36.00 (about 45% of subtotal $80.02) correctly lowers the commission base; commission looks low vs. subtotal but is correct

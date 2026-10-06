@@ -2,3 +2,5 @@
 __pycache__/
 *.pyc
 .env
+output/*
+!output/findings_report.md

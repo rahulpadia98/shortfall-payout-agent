@@ -27,8 +27,19 @@ def main():
         print(f"  {t:<32}{counts.get(t, 0):>4}")
     print(f"\nWrote {config.FINDINGS_CSV}")
 
-    if not args.no_llm:
-        print("\nLLM explanations are not available yet; ran the deterministic stage only.")
+    if args.no_llm:
+        return
+
+    from .llm import explain_findings
+    from .report import write_report
+
+    print(f"\nExplaining findings with {config.ANTHROPIC_MODEL} ...")
+    results, stats = explain_findings(findings, orders, payouts, terms)
+    write_report(findings, results, stats, config.ANTHROPIC_MODEL)
+    mismatches = sum(1 for r in results.values() if r.get("explanation_check") == "mismatch")
+    print(f"\nModel calls: {stats['called']}  cached: {stats['cached']}  errors: {stats['errors']}  "
+          f"amount mismatches flagged: {mismatches}")
+    print(f"Wrote {config.REPORT_MD}")
 
 
 if __name__ == "__main__":

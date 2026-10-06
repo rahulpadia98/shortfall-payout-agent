@@ -13,6 +13,13 @@ against marketplace payout reports and flags discrepancies.
 - Arithmetic (matching, commissions, totals) is done in deterministic Python,
   never by an LLM.
 - Ask before deleting or overwriting any existing file.
+- Branding: this is a standalone portfolio product called "Shortfall", not tied
+  to any real company. Never mention Loop or any real company in code, comments,
+  docs, reports, or terminal output. The product name lives in a single setting,
+  `APP_NAME = "Shortfall"` in `agent/config.py`; use it everywhere a product name
+  appears in user-facing output.
+- Never open, read, or print `.env`. During build phases, never open anything in
+  `eval/` (scoring happens in a separate phase).
 
 ## Layout
 
